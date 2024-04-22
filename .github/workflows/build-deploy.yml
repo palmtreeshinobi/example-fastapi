@@ -64,9 +64,6 @@ jobs:
               uses: docker/build-push-action@v5
               with:
                 context: .
-                file: ./fastapi-api
+                file: ./Dockerfile
                 push: true
-                tags: ${{ secrets.DOCKER_HUB_USERNAME }}/clockbox:latest
-
-            - name: Image digest
-              run: echo ${{ steps.docker_build.outputs.digest }}
+                tags: ${{ secrets.DOCKER_HUB_USERNAME }}/fastapi-api:latest
