@@ -28,4 +28,4 @@ app.include_router(vote.router)
 
 @app.get("/")
 def root():
-    return {"message": "Welcome to Lazy Palms API practice"}
+    return {"message": "Successfully deployed from CI/CD Pipeline"}
